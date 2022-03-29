@@ -1,5 +1,6 @@
 package com.kbe.service.livedata;
 
+import com.kbe.service.livedata.controller.websocket.CryptoSocket;
 import com.kbe.service.livedata.controller.websocket.Serversocket;
 import org.glassfish.tyrus.server.Server;
 import org.springframework.boot.SpringApplication;
@@ -12,6 +13,7 @@ import java.io.InputStreamReader;
 
 @SpringBootApplication
 public class Application {
+	private static CryptoSocket cryptoSocket = new CryptoSocket();
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -36,5 +38,4 @@ public class Application {
 			}
 		}
 	}
-
 }
